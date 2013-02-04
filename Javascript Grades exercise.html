@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grades Exercise 2/1/13</title>
+
+</head>
+<body>
+
+<script>
+var students = [['John', 80], ['Paul', 70], ['George', 85], ['Ringo', 95], ['Dirk', 65], ['Mick', 88], ['Keith', 90], ['Bill', 80], ['Brian', 85], ['Charlie', 75]];
+
+var calcAvg = 0;
+
+for (var i=0; i <students.length; i++) {
+	calcAvg += students[i][1];
+	var avg = (calcAvg/students.length);
+};
+
+document.write("Average grade: <strong>" + " " + (calcAvg)/students.length + "</strong>");
+
+var convert = function() {
+	if (avg < 60){
+		document.write("<p>Letter Grade:" + " " + "<strong>F</strong></p>")
+	} else if (avg < 70) {
+		document.write("<p>Letter Grade:" + " " + "<strong>D</strong></p>")
+	} else if (avg < 80) {
+		document.write("<p>Letter Grade:" + " " + "<strong>C</strong></p>")
+	} else if (avg < 90) {
+		document.write("<p>Letter Grade:" + " " + "<strong>B</strong></p>")
+	} else if (avg < 100) {
+		document.write("<p>Letter Grade:" + " " + "<strong>A</strong></p>")
+	}
+}
+
+convert();
+
+</script>
+</body>
+</html>
